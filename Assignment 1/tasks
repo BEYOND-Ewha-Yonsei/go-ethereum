@@ -3,4 +3,4 @@ dev모드에서 Geth 실행
 Faucet에서 ETH 받아서 Account 채우기(eth.sendTransaction 이용)
 Account 잔액 확인
 
-deadline: 2021년 2월 4일 23:59
+#deadline: 2021년 2월 4일 23:59

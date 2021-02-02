@@ -17,6 +17,6 @@ STEP 5. 접속된 네트워크의 IPC endpoint url과 Geth Console의 datadir �
 
 STEP 6. Console에 접속된 Terminal 인증 파일 업로드
 - 네트워크 선택은 자유
-- 파일 이름은 'Assignment1_이름'
+- 파일 이름: 'Assignment1_이름'
 
 deadline: 2021년 2월 4일 23:59 */

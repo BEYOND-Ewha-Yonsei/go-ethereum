@@ -11,7 +11,7 @@ STEP 3. Main / Ropsten / Görli 네트워크 접속
 - https://geth.ethereum.org/docs/getting-started
 
 STEP 4. Geth Console 접속 (IPC 이용)
-- STEP 3의 네트워크를 접속한 Terminal과 다른 Terminal에서 접속
+- STEP 3에서 네트워크를 접속한 Terminal과 다른 Terminal에서 접속
 
 STEP 5. 접속된 네트워크의 IPC endpoint url과 Geth Console의 datadir 일치여부 확인
 

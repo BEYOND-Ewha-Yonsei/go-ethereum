@@ -1,22 +1,22 @@
-// deadline: 2021년 2월 4일 23:59
+/* deadline: 2021년 2월 4일 23:59
 
 STEP 1. Cloud 접속
-* 슬랙 개발팀 채널에서 ssh 주소와 비밀번호 확인
+- 슬랙 개발팀 채널에서 ssh 주소와 비밀번호 확인
 
 STEP 2. Geth 설치 (npm, golang, web3도 설치)
-* https://geth.ethereum.org/docs/install-and-build/installing-geth
+- https://geth.ethereum.org/docs/install-and-build/installing-geth
 
 STEP 3. Main / Ropsten / Görli 네트워크 접속
-* sync를 full, fast, light로 바꿔가면서 차이점 파악
-* https://geth.ethereum.org/docs/getting-started
+- sync를 full, fast, light로 바꿔가면서 차이점 파악
+- https://geth.ethereum.org/docs/getting-started
 
 STEP 4. Geth Console 접속 (IPC 이용)
-* STEP 3의 네트워크를 접속한 Terminal과 다른 Terminal에서 접속
+- STEP 3의 네트워크를 접속한 Terminal과 다른 Terminal에서 접속
 
 STEP 5. 접속된 네트워크의 IPC endpoint url과 Geth Console의 datadir 일치여부 확인
 
 STEP 6. Console에 접속된 Terminal 인증 파일 업로드
-* 네트워크 선택은 자유
-* 파일 형식도 자유
+- 네트워크 선택은 자유
+- 파일 형식도 자유
 
-// deadline: 2021년 2월 4일 23:59
+deadline: 2021년 2월 4일 23:59 */

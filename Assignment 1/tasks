@@ -8,9 +8,9 @@ STEP 3. Main / Ropsten / Goerli 네트워크 접속
 * https://geth.ethereum.org/docs/getting-started
 
 STEP 4. Geth Console 접속 (IPC 이용)
-* 다른 Terminal에서 접속
+* STEP 3의 네트워크와 다른 Terminal에서 접속
 
-STEP 5. 접속된 Network의 IPC endpoint url과 Geth Console의 datadir 일치여부 확인
+STEP 5. 접속된 네트워크의 IPC endpoint url과 Geth Console의 datadir 일치여부 확인
 
 STEP 6. Console에 접속된 Terminal 인증 파일 업로드
 * 네트워크 선택은 자유

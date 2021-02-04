@@ -1,3 +1,39 @@
-미정
+/* deadline: 2021년 2월 6일 23:59
 
-#deadline: 2021년 2월 6일 23:59
+STEP 0. Test Network 및 Console 접속 
+        - Assignment1 참고
+        - 네트워크 선택은 자유
+
+STEP 1. 계정 2개 생성 및 확인
+        - 계정 확인은 두 종류의 constructor 이용 가능
+        - https://web3js.readthedocs.io/en/v1.3.0/web3.html
+
+STEP 2. 계정 faucet
+        - Görli: https://goerli-faucet.slock.it/
+        - Ropsten: https://faucet.dimensions.network/ 
+
+STEP 3. 계정[0]에서 계정[1]로 송금
+        - https://geth.ethereum.org/docs/getting-started
+
+STEP 4. 계정 unlock
+     
+STEP 5. 계정[0]에서 계정[1]로 송금
+
+STEP 6. 계정 잔액 확인
+        - eth.getBalance(personal.listAccounts[0])는 wei로만 확인가능
+        
+STEP 7. Transaction Receipt 출력
+        - blockHash, blockNumber, from, to, transactionHash 확인
+        - https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#gettransactionreceipt
+
+STEP 8. Görli Block Explorer에서 blockNumber로 검색
+        - https://goerli.etherscan.io/
+
+STEP 9. 2 transactions(click to view Transactions) 클릭
+        - contract creation tx와 ETH 전송 tx 확인
+        
+STEP 10. STEP 7의 'Transaction Receipt 출력 Terminal'와 STEP 9의 'Transactions 페이지' 파일 업로드
+        - 파일 이름: 'Assignment2_이름_1', 'Assignment2_이름_2'
+
+deadline: 2021년 2월 6일 23:59 */
+

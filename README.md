@@ -122,7 +122,7 @@ web3.eth.accounts.create()
 ``` 
 or
 ```
-personal.newAccount()
+web3.eth.personal.newAccount()
 ```
 
 <https://web3js.readthedocs.io/en/v1.2.0/web3-eth-accounts.html#create>
@@ -133,7 +133,7 @@ web3.eth.accounts
 ``` 
 or 
 ```
-personal.listAccounts
+web3.eth.personal.listAccounts
 ```
 
 ## 2.3. Faucet
@@ -143,7 +143,7 @@ personal.listAccounts
 
 ## 2.4. 계정[0]에서 계정[1]로 송금
 ```
-eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1], value: web3.toWei(0.1, "ether")})
+web3.eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1], value: web3.toWei(0.1, "ether")})
 ```
 
 - 단위가 wei로 표시되지 않게 조심할 것
@@ -153,7 +153,7 @@ eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1
 
 ## 2.5. 계정 unlock
 ```
-personal.unlockAccount(eth.accounts[0])
+web3.eth.personal.unlockAccount(eth.accounts[0])
 ```
 
 <https://web3js.readthedocs.io/en/v1.2.0/web3-eth-personal.html#unlockaccount>
@@ -161,17 +161,17 @@ personal.unlockAccount(eth.accounts[0])
      
 ## 2.6. 계정[0]에서 계정[1]로 다시 송금 
 ```
-eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1], value: web3.toWei(0.1, "ether")})
+web3.eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1], value: web3.toWei(0.1, "ether")})
 ```
 
 ## 2.7. 계정 잔액 확인
-- ```eth.getBalance(personal.listAccounts[0])```는 wei로만 확인가능
+- ```web3.eth.getBalance(personal.listAccounts[0])```는 wei로만 확인가능
 
 - ```web3.fromWei(eth.getBalance(personal.listAccounts[0]), "ether")```는 ETH로 확인가능
         
 ## 2.8. Transaction Receipt 출력
 ```
-eth.getTransactionReveipt("/*2.6에서 출력된 트랜잭션 hash*/")
+web3.eth.getTransactionReveipt("/*2.6에서 출력된 트랜잭션 hash*/")
 ```
 
 - blockHash, blockNumber, from, to, transactionHash 확인

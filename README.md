@@ -4,7 +4,7 @@
 #| tasks
 ----|-----------
 1| Geth 설치 / Test Network 접속 / Console 접속
-2| 계정 생성 / 계정 확인 / faucet
+2| 계정 생성 / 계정 확인 / faucet / 송금 / 잔액 
 3| 스마트 컨트랙트 작성 / 배포 
 
 ***
@@ -77,7 +77,7 @@ Ropsten| ```geth --ropsten --syncmode "full" --rpc --signer=</usr/bin/clef>/clef
 Görli| ```geth --goerli --syncmode "light" --rpc --signer=</usr/bin/clef>/clef.ipc```
 
 * sync를 full, fast, light로 바꿔가면서 차이점 살펴보기
-* [x] signer 주소는 다를 수 있으므로 clef 위치를 꼭 확인
+* [NOTICE] signer 주소는 다를 수 있으므로 clef 위치를 꼭 확인
 * clef 위치 확인방법 > ```clef```
 
 ![clef](https://user-images.githubusercontent.com/70181621/107146305-94ee9880-698a-11eb-835e-f16f08679afd.png)
@@ -108,7 +108,7 @@ Görli| ```geth attach /root/.ethereum/goerli/geth.ipc```
 2. 계정 확인
 3. Faucet
 4. 송금 (트랜잭션)
-5. 계정 잔액 
+5. 잔액 확인
 
 - geth와 web3 공식 문서들로 재구성
 

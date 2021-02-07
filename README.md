@@ -77,7 +77,7 @@ network| command
 Ropsten| ```geth --ropsten --syncmode "full" --rpc --signer=</usr/bin/clef>/clef.ipc```
 Görli| ```geth --goerli --syncmode "light" --rpc --signer=</usr/bin/clef>/clef.ipc```
 
-* sync를 full, fast, light로 바꿔가면서 차이점 
+* sync를 full, fast, light로 바꿔가면서 차이점파악
 * [NOTICE] signer 주소는 다를 수 있으므로 clef 위치를 꼭 확인
 * clef 위치 확인방법 > ```clef```
 

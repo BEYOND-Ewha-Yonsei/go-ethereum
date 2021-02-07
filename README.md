@@ -1,11 +1,16 @@
 # Go-ETHereum 실습
+본 실습은 geth와 web3 공식 문서들을 바탕으로 재구성되었습니다.
 
 
 #| tasks
 ----|-----------
 1| Geth 설치 / Test Network 접속 / Console 접속
-2| 계정 생성 / 계정 확인 / faucet / 송금 / 잔액 
+2| 계정 생성 / 계정 확인 / faucet / 송금 / 잔액  
 3| 스마트 컨트랙트 작성 / 배포 
+
+<https://geth.ethereum.org/docs/getting-started>
+
+<https://web3js.readthedocs.io/en/v1.3.0/web3.html>
 
 ***
 
@@ -14,11 +19,6 @@
 2. Test Network 접속
 3. Geth Console 접속
 
-- geth와 web3 공식 문서들로 재구성
-
-<https://geth.ethereum.org/docs/getting-started>
-
-<https://web3js.readthedocs.io/en/v1.3.0/web3.html>
 
 ## 1.1. Cloud 접속
 ```
@@ -109,13 +109,8 @@ Görli| ```geth attach /root/.ethereum/goerli/geth.ipc```
 2. 계정 확인
 3. Faucet
 4. 송금 (트랜잭션)
-5. 잔액 확인
+5. 계정 잔액 확인
 
-- geth와 web3 공식 문서들로 재구성
-
-<https://geth.ethereum.org/docs/getting-started>
-
-<https://web3js.readthedocs.io/en/v1.3.0/web3.html>
 
 ## 2.1. Test Network 및 Console 접속
 Assignment 1 참고
@@ -141,7 +136,7 @@ or
 personal.listAccounts
 ```
 
-## 2.3. 계정 faucet
+## 2.3. Faucet
 - Görli: <https://goerli-faucet.slock.it/>
 - Ropsten: <https://faucet.dimensions.network/> 
 - 가끔 faucet이 되지 않는 에러가 있으므로, 그럴 땐 다른 Test Network에서 시도해보기
@@ -157,11 +152,14 @@ eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1
 
 
 ## 2.5. 계정 unlock
-```personal.unlockAccount(eth.accounts[0])```
+```
+personal.unlockAccount(eth.accounts[0])
+```
 
 <https://web3js.readthedocs.io/en/v1.2.0/web3-eth-personal.html#unlockaccount>
+- unlock을 하지 않으면 송금 불가능
      
-### 2.6. 계정[0]에서 계정[1]로 송금 (트랜잭션)
+### 2.6. 계정[0]에서 계정[1]로 다시 송금 
 ```
 eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1], value: web3.toWei(0.1, "ether")})
 ```

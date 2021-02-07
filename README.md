@@ -1,5 +1,5 @@
 # Go-ETHereum 
-본 실습은 geth와 web3 공식 문서들을 바탕으로 재구성되었습니다.
+본 실습은 [geth](https://geth.ethereum.org/docs/getting-started)와 [web3](https://web3js.readthedocs.io/en/v1.3.0/web3.html) 공식 문서들을 바탕으로 재구성되었습니다.
 
 
 #| tasks
@@ -8,9 +8,6 @@
 2| [계정 생성](#22-계정-생성-및-확인) / [faucet](#23-faucet) / [송금](#24-계정0에서-계정1로-송금) / [잔액 확인](#27-계정-잔액-확인)
 3| 스마트 컨트랙트 작성 / 컴파일 / 배포
 
-<https://geth.ethereum.org/docs/getting-started>
-
-<https://web3js.readthedocs.io/en/v1.3.0/web3.html>
 
 ***
 

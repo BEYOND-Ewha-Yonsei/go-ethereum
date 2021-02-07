@@ -4,8 +4,8 @@
 
 #| tasks
 ----|--------------
-1| [Geth 설치](#1.21.-Geth) / Test Network 접속 / Console 접속
-2| 계정 생성 / faucet / 송금 / 잔액 확인
+1| [Geth 설치](#121-geth) / [Test Network 접속](#13-test-network-접속) / [Console 접속](#14-geth-console-접속-ipc-이용)
+2| [계정 생성](#22-계정-생성-및-확인) / [faucet](#23-faucet) / [송금](#24-계정0에서-계정1로-송금) / [잔액 확인](#27-계정-잔액-확인)
 3| 스마트 컨트랙트 작성 / 배포
 
 <https://geth.ethereum.org/docs/getting-started>

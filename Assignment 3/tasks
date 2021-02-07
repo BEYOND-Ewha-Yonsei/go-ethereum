@@ -14,8 +14,8 @@ STEP 1. solidity compiler 설치
 STEP 2. 스마트 컨트랙트 작성
         - 각각의 constant가 다음과 같은 값을 return하도록 할 것
         - 입력: beyond.showWhoWeAre() // 출력: "We are Team BEYOND!"
-        - 입력: beyond.cleaner("아무 값이나 입력해도 값이 나오지 않게") // 출력:  ""
-        - 자세한 코드는 STEP 0의 링크와 업로드된 'beyond.sol' 참고
+        - 입력: beyond.cleaner("아무거나 입력해도 값이 나오지 않게") // 출력:  ""
+        - 자세한 코드는 STEP 0의 링크 및 업로드된 'beyond.sol' 참고
 
 
 STEP 3. beyond.sol을 ABI와 바이트코드로 컴파일
@@ -27,6 +27,7 @@ STEP 4. 네트워크 실행 및 Console 접속
 STEP 5. 바이트코드와 ABI 객체 정의
         - bytecode = '0x /*STEP 3 결과 입력*/'
         - obj = JSON.parse('/*STEP 3 결과 입력*/')
+        - 본 guideline에서는 변수를 위와 같은 이름으로 선언계속 사용함
         
         - JSON.parse 설치 (STEP 3에서 얻은 ABI는 string일 뿐, JavaScript 배열이 아니기 때문에 콘솔에서 작동하려면 파싱 필요)
         - https://www.npmjs.com/package/parse-json

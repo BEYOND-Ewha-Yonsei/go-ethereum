@@ -4,9 +4,9 @@
 
 #| tasks
 ----|--------------
-1| [Geth 설치](#121-geth) / [Test Network 접속](#13-test-network-접속) / [Console 접속](#14-geth-console-접속-ipc-이용)
+1| [Geth 설치](#12-개발환경-세팅) / [Test Network 접속](#13-test-network-접속) / [Console 접속](#14-geth-console-접속-ipc-이용)
 2| [계정 생성](#22-계정-생성-및-확인) / [faucet](#23-faucet) / [송금](#24-계정0에서-계정1로-송금) / [잔액 확인](#27-계정-잔액-확인)
-3| 스마트 컨트랙트 작성 / 배포
+3| 스마트 컨트랙트 작성 / 컴파일 / 배포
 
 <https://geth.ethereum.org/docs/getting-started>
 
@@ -186,7 +186,3 @@ https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#gettransactionreceipt
 ### 2.92. 계정 생성 Tx과 송금 Tx 확인
 ![Assignment2_이주연_2](https://user-images.githubusercontent.com/70181621/107146971-c1a4af00-698e-11eb-9c86-72e1ff349a43.png)
 
-        
-***
-
-# Assignment 3.

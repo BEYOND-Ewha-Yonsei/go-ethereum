@@ -16,4 +16,4 @@ contract teamBeyond {
 // completely disregard the _chainEntry
     return chainResult;
   }
-}
+} 

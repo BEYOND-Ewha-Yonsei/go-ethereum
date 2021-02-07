@@ -94,9 +94,9 @@ Main| ```geth attach```
 Ropsten| ```geth attach /root/.ethereum/ropsten/geth.ipc```
 Görli| ```geth attach /root/.ethereum/goerli/geth.ipc```
 
-* [NOTICE] IPC endpoint는 다를 수 있으므로 1.33에서 꼭 확인
+* [NOTICE] IPC endpoint는 다를 수 있으므로 [1.33](#133-ipc-url-확인)에서 꼭 확인
 
-## 1.5. 접속된 네트워크의 IPC endpoint url(1.33 참고)과 Geth Console의 datadir 일치여부 확인
+## 1.5. 접속된 네트워크의 [IPC endpoint url](#133-ipc-url-확인)과 Geth Console의 datadir 일치여부 확인
 ![15](https://user-images.githubusercontent.com/70181621/107147360-f3b71080-6990-11eb-81c5-748b51d5ec38.png)
 
 

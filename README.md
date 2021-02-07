@@ -17,6 +17,7 @@
 - geth와 web3 공식 문서들로 재구성
 
 <https://geth.ethereum.org/docs/getting-started>
+
 <https://web3js.readthedocs.io/en/v1.3.0/web3.html>
 
 ### 1.1. Cloud 접속
@@ -113,6 +114,7 @@ Görli| ```geth attach /root/.ethereum/goerli/geth.ipc```
 - geth와 web3 공식 문서들로 재구성
 
 <https://geth.ethereum.org/docs/getting-started>
+
 <https://web3js.readthedocs.io/en/v1.3.0/web3.html>
 
 ### 2.1. Test Network 및 Console 접속
@@ -170,7 +172,9 @@ eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1
 ```web3.fromWei(eth.getBalance(personal.listAccounts[0]), "ether")```는 ETH로 확인가능
         
 ### 2.8. Transaction Receipt 출력
-```eth.getTransactionReveipt("/*2.6에서 출력된 트랜잭션 hash*/")```
+```
+eth.getTransactionReveipt("/*2.6에서 출력된 트랜잭션 hash*/")
+```
 
 - blockHash, blockNumber, from, to, transactionHash 확인
 ![Assignment2_이주연_1](https://user-images.githubusercontent.com/70181621/107146953-af2a7580-698e-11eb-82e9-b6fb4c8f49aa.png)

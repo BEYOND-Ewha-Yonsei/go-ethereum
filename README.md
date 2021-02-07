@@ -77,7 +77,7 @@ network| command
 Ropsten| ```geth --ropsten --syncmode "full" --rpc --signer=</usr/bin/clef>/clef.ipc```
 Görli| ```geth --goerli --syncmode "light" --rpc --signer=</usr/bin/clef>/clef.ipc```
 
-* sync를 full, fast, light로 바꿔가면서 차이점 살펴보기
+* sync를 full, fast, light로 바꿔가면서 차이점 
 * [NOTICE] signer 주소는 다를 수 있으므로 clef 위치를 꼭 확인
 * clef 위치 확인방법 > ```clef```
 
@@ -139,7 +139,7 @@ personal.listAccounts
 ## 2.3. Faucet
 - Görli: <https://goerli-faucet.slock.it/>
 - Ropsten: <https://faucet.dimensions.network/> 
-- 가끔 faucet이 되지 않는 에러가 있으므로, 그럴 땐 다른 Test Network에서 시도해보기
+- 가끔 faucet이 되지 않는 에러가 있으므로, 그럴 땐 다른 Test Network에서 시도
 
 ## 2.4. 계정[0]에서 계정[1]로 송금
 ```
@@ -165,9 +165,9 @@ eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1
 ```
 
 ## 2.7. 계정 잔액 확인
-```eth.getBalance(personal.listAccounts[0])```는 wei로만 확인가능
+- ```eth.getBalance(personal.listAccounts[0])```는 wei로만 확인가능
 
-```web3.fromWei(eth.getBalance(personal.listAccounts[0]), "ether")```는 ETH로 확인가능
+- ```web3.fromWei(eth.getBalance(personal.listAccounts[0]), "ether")```는 ETH로 확인가능
         
 ## 2.8. Transaction Receipt 출력
 ```

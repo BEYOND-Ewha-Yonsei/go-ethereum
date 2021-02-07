@@ -159,7 +159,7 @@ personal.unlockAccount(eth.accounts[0])
 <https://web3js.readthedocs.io/en/v1.2.0/web3-eth-personal.html#unlockaccount>
 - unlock을 하지 않으면 송금 불가능
      
-### 2.6. 계정[0]에서 계정[1]로 다시 송금 
+## 2.6. 계정[0]에서 계정[1]로 다시 송금 
 ```
 eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1], value: web3.toWei(0.1, "ether")})
 ```

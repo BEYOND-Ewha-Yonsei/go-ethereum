@@ -27,7 +27,7 @@ STEP 4. 네트워크 실행 및 Console 접속
 STEP 5. 바이트코드와 ABI 객체 정의
         - bytecode = '0x /*STEP 3 결과 입력*/'
         - obj = JSON.parse('/*STEP 3 결과 입력*/')
-        - 본 guideline에서는 변수를 위와 같은 이름으로 선언계속 사용함
+        - 본 guideline에서는 변수를 위와 같은 이름으로 선언하여 계속 사용함
         
         - JSON.parse 설치 (STEP 3에서 얻은 ABI는 string일 뿐, JavaScript 배열이 아니기 때문에 콘솔에서 작동하려면 파싱 필요)
         - https://www.npmjs.com/package/parse-json

@@ -178,7 +178,10 @@ eth.getTransactionReveipt("/*2.6에서 출력된 트랜잭션 hash*/")
 ![Assignment2_이주연_1](https://user-images.githubusercontent.com/70181621/107146953-af2a7580-698e-11eb-82e9-b6fb4c8f49aa.png)
 https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#gettransactionreceipt
 
-## 2.9. Görli Block Explorer에서 확인 <https://goerli.etherscan.io>
+## 2.9. Block Explorer에서 확인 
+- Görli: <https://goerli.etherscan.io>
+- Ropsten: <https://ropsten.etherscan.io/>
+
 ### 2.91. blockNumber로 검색
 ### 2.92. contract creation tx와 ETH 전송 tx 확인
 ![Assignment2_이주연_2](https://user-images.githubusercontent.com/70181621/107146971-c1a4af00-698e-11eb-9c86-72e1ff349a43.png)

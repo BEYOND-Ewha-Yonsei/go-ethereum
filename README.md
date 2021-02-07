@@ -1,4 +1,4 @@
-# go-ethereum 
+# Go-EThereum 실습
 
 
 #| tasks
@@ -10,11 +10,20 @@
 ***
 
 ## Assignment 1.
+1. Geth 설치
+2. Test Network 접속
+3. Geth Console 접속
+
+- geth와 web3 공식 문서들로 재구성
+
+<https://geth.ethereum.org/docs/getting-started>
+<https://web3js.readthedocs.io/en/v1.3.0/web3.html>
 
 ### 1.1. Cloud 접속
 ```
 ssh root@주소
 ```
+
 
 
 ### 1.2. 개발환경 세팅
@@ -44,7 +53,7 @@ sudo apt-get upgrade
 sudo apt-get install golang
 ```
 
-#### 1.23. web3
+#### 1.24. web3
 ```
 sudo apt-get install npm
 ```
@@ -53,7 +62,7 @@ sudo apt-get install npm
 ### 1.3. Test Network 접속
 #### 1.31. Default
 
-network| commands
+network| command
 ----|-----------
 Main| ```geth console```
 Ropsten| ```geth --ropsten```
@@ -62,24 +71,24 @@ Görli| ```geth --goerli```
 
 #### 1.32. 추가 명령어를 통해 syncmode 조정 가능
 
-network| commands
+network| command
 ----|-----------
 Ropsten| ```geth --ropsten --syncmode "full" --rpc --signer=</usr/bin/clef>/clef.ipc```
 Görli| ```geth --goerli --syncmode "light" --rpc --signer=</usr/bin/clef>/clef.ipc```
 
 * sync를 full, fast, light로 바꿔가면서 차이점 살펴보기
-* NOTICE! signer 주소는 다를 수 있으므로 clef 위치를 꼭 확인
-* clef 위치 확인방법
+* [NOTICE] signer 주소는 다를 수 있으므로 clef 위치를 꼭 확인
+* clef 위치 확인방법 > ```clef```
+
 ![clef](https://user-images.githubusercontent.com/70181621/107146305-94ee9880-698a-11eb-835e-f16f08679afd.png)
 
-<https://geth.ethereum.org/docs/getting-started>
 
 #### 1.33. IPC url 확인 
-Test Network에 성공적으로 접속되면 확인가능
+- Test Network에 성공적으로 접속되면 확인가능
 ![ropsten](https://user-images.githubusercontent.com/70181621/107146184-d599e200-6989-11eb-80a9-ee84a53c4e6d.png)
 
 ### 1.4. Geth Console 접속 (IPC 이용)
-1.3에서 네트워크를 접속한 Terminal과 다른 Terminal에서 접속
+- 1.3에서 네트워크를 접속한 Terminal과 다른 Terminal에서 접속
 
 network| commands
 ----|-----------
@@ -87,14 +96,24 @@ Main| ```geth attach```
 Ropsten| ```geth attach /root/.ethereum/ropsten/geth.ipc```
 Görli| ```geth attach /root/.ethereum/goerli/geth.ipc```
 
-* NOTICE! IPC endpoint는 다를 수 있으므로 1.33에서 꼭 확인
+* [NOTICE] IPC endpoint는 다를 수 있으므로 1.33에서 꼭 확인
 
 ### 1.5. 접속된 네트워크의 IPC endpoint url(1.33 참고)과 Geth Console의 datadir 일치여부 확인
-![console](https://user-images.githubusercontent.com/70181621/107146409-5d342080-698b-11eb-9af0-0d304956ed7e.png)
+![15](https://user-images.githubusercontent.com/70181621/107147360-f3b71080-6990-11eb-81c5-748b51d5ec38.png)
 
 
 ***
 ## Assignment 2.
+1. 계정 생성
+2. 계정 확인
+3. Faucet
+4. 송금 (트랜잭션)
+5. 계정 잔액 
+
+- geth와 web3 공식 문서들로 재구성
+
+<https://geth.ethereum.org/docs/getting-started>
+<https://web3js.readthedocs.io/en/v1.3.0/web3.html>
 
 ### 2.1. Test Network 및 Console 접속
 Assignment 1 참고
@@ -155,7 +174,7 @@ eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1
 
 - blockHash, blockNumber, from, to, transactionHash 확인
 ![Assignment2_이주연_1](https://user-images.githubusercontent.com/70181621/107146953-af2a7580-698e-11eb-82e9-b6fb4c8f49aa.png)
-- https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#gettransactionreceipt
+https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#gettransactionreceipt
 
 ### 2.9. Görli Block Explorer에서 확인 <https://goerli.etherscan.io>
 #### 2.91. blockNumber로 검색

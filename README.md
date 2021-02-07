@@ -5,7 +5,7 @@
 #| tasks
 ----|-----------
 1| Geth 설치 / Test Network 접속 / Console 접속
-2| 계정 생성 / 계정 확인 / faucet / 송금 / 잔액   
+2| 계정 생성 / faucet / 송금 / 잔액 
 3| 스마트 컨트랙트 작성 / 배포 
 
 <https://geth.ethereum.org/docs/getting-started>
@@ -61,7 +61,7 @@ sudo apt-get install npm
 
 
 ## 1.3. Test Network 접속
-### 1.31. Default
+### 1.31. Default (syncmode "fast")
 
 network| command
 ----|-----------

@@ -1,3 +1,76 @@
-미정
+/* deadline: 2021년 2월 8일 23:59
 
-#deadline: 2021년 2월 8일 23:59
+
+STEP 0. 참고링크
+        - Assignment 3은 다음 링크를 변형하여 구성하였습니다.
+        - https://medium.com/mercuryprotocol/dev-highlights-of-this-week-cb33e58c745f
+
+
+STEP 1. solidity compiler 설치
+        - https://docs.soliditylang.org/en/v0.8.0/installing-solidity.html
+
+
+STEP 2. 스마트 컨트랙트 작성
+        - 각각의 constant가 다음과 같은 값을 return하도록 할 것
+        - 입력: beyond.showWhoWeAre() // 출력: "We are Team BEYOND!"
+        - 입력: beyond.cleaner("아무 값이나 입력해도 값이 나오지 않게") // 출력:  ""
+        - 자세한 코드는 STEP 0의 링크와 업로드된 'beyond.sol' 참고
+
+
+STEP 3. beyond.sol을 ABI와 바이트코드로 컴파일
+
+
+STEP 4. 네트워크 실행 및 Console 접속
+
+
+STEP 5. 바이트코드와 ABI 객체 정의
+        - bytecode = '0x /*STEP 3 결과 입력*/'
+        - obj = JSON.parse('/*STEP 3 결과 입력*/')
+        
+        - JSON.parse 설치 (STEP 3에서 얻은 ABI는 string일 뿐, JavaScript 배열이 아니기 때문에 콘솔에서 작동하려면 파싱 필요)
+        - https://www.npmjs.com/package/parse-json
+        - https://github.com/trufflesuite/truffle-artifactor/issues/9
+        - https://stackoverflow.com/questions/56126313/json-expecting-eof-got
+
+
+STEP 6. 배포를 위한 parameter 정의
+        - deployObj = {from:eth.coinbase, data: bytecode, gas:2000000} 
+
+
+STEP 7. STEP 5에서 파싱한 ABI 객체로 컨트랙트 객체 생성
+        - contractObj = web3.eth.contract(obj) 
+
+        - 컨트랙트 객체를 만들어야 interact가 용이 (개별 스마트 컨트랙트에 json interface를 부여하기 때문: web3가 자동으로 low level인 ABI call을 RPC로 바꿔서 표기)
+        - https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html#eth-contract
+
+
+STEP 8. 컨트랙트 인스턴스 생성 및 배포
+        - Instance = contractObj.new(deployObj) 
+        - 컨트랙트 인스턴스를 배포하기 위해 트랜잭션 생성 > web3 컨트랙트 인스턴스로 변경 > 지금은 주소 없음: 아직 채굴되지 않았기 때문
+
+
+STEP 9. 계정 unlock
+
+
+STEP 10. 컨트랙트 인스턴스 생성
+        - Transaction Hash 확인 가능 (컨트랙트 생성 트랜잭션)
+        - Etherscan에서 Transaction Hash로 검색하면, 해당 트랜잭션이 본인 계정 주소에서 보낸 'Contract Creation'임을 확인 가능
+   
+   
+STEP 11. Transaction Receipt에서 컨트랙트 주소 확인
+        - eth.getTransactionReceipt(Instance.transactionHash)
+
+
+STEP 12. 컨트랙트 주소 정의
+        - address = eth.getTransactionReceipt(Instance.transactionHash).contractAddress
+
+
+STEP 13. 컨트랙트 객체 정의
+        - beyond = contractObj.at(address)
+
+
+STEP 14. beyond.showWoWeAre()과 beyond.cleaner("/*아무거나 입력*/") 출력 Terminal 업로드
+        - 파일 이름: 'Assignment3_이름'
+
+
+deadline: 2021년 2월 8일 23:59 */

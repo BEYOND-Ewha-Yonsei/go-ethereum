@@ -1,4 +1,4 @@
-# Go-EThereum 실습
+# Go-ETHereum 실습
 
 
 #| tasks
@@ -77,7 +77,7 @@ Ropsten| ```geth --ropsten --syncmode "full" --rpc --signer=</usr/bin/clef>/clef
 Görli| ```geth --goerli --syncmode "light" --rpc --signer=</usr/bin/clef>/clef.ipc```
 
 * sync를 full, fast, light로 바꿔가면서 차이점 살펴보기
-* [NOTICE] signer 주소는 다를 수 있으므로 clef 위치를 꼭 확인
+* [x] signer 주소는 다를 수 있으므로 clef 위치를 꼭 확인
 * clef 위치 확인방법 > ```clef```
 
 ![clef](https://user-images.githubusercontent.com/70181621/107146305-94ee9880-698a-11eb-835e-f16f08679afd.png)

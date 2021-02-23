@@ -6,7 +6,7 @@
 ----|--------------
 1| [Geth 설치](#12-개발환경-세팅) / [Test Network 접속](#13-test-network-접속) / [Console 접속](#14-geth-console-접속-ipc-이용)
 2| [계정 생성](#22-계정-생성-및-확인) / [faucet](#23-faucet) / [송금](#24-계정0에서-계정1로-송금) / [잔액 확인](#27-계정-잔액-확인)
-3| 스마트 컨트랙트 작성 / 컴파일 / 배포
+3| [스마트 컨트랙트 작성](#32-스마트-컨트랙트-작성) / [컴파일](#33-beyondsol을-ABI와-bytecode로-컴파일) / [배포](#37-배포를-위한-parameter-정의)
 
 
 ***
@@ -109,7 +109,7 @@ Görli| ```geth attach /root/.ethereum/goerli/geth.ipc```
 5. 계정 잔액 확인
 
 
-## 2.1. Test Network 및 Console 접속
+## 2.1. [Test Network](#13-test-network-접속) 및 [Console](#14-geth-console-접속-ipc-이용) 접속
 Assignment 1 참고
 
 ## 2.2. 계정 생성 및 확인
@@ -195,7 +195,7 @@ https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#gettransactionreceipt
 npm install -g solc
 ```
 
-## 3.2 스마트 컨트랙트 
+## 3.2 스마트 컨트랙트 작성
 작성 조건
 1) 각각의 constant가 다음과 같은 값을 return하도록 할 것
 2) 입력: ```beyond.showWhoWeAre()  //  출력: "We are Team BEYOND!"
@@ -227,9 +227,17 @@ contract teamBeyond {
 ```
 
 ## 3.3 beyond.sol을 ABI와 bytecode로 컴파일
+```
+// ABI
+solc --abi beyond.sol
+```
+```
+// bytecode
+solc --bin beyond.sol
+```
 
-## 3.4 네트워크 실행 및 Console 접속
-Assignment 1 
+## 3.4 [네트워크 실행](#13-test-network-접속) 및 [Console](#14-geth-console-접속-ipc-이용) 접속
+Assignment 1 참고
 
 ## 3.5 bytecode와 ABI 객체 정의
 ```

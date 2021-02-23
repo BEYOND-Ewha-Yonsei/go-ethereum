@@ -185,10 +185,9 @@ https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#gettransactionreceipt
 
 ***
 # Assignment 3.
-1. 계정 생성
-2. 계정 확인
-3. Faucet
-4.
+1. 스마트 컨트랙트 작성
+2. 컴파일
+3. 배포
 
 
 ## 3.1. Solidity Compiler 설치

@@ -183,3 +183,118 @@ https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#gettransactionreceipt
 ### 2.92. 계정 생성 Tx과 송금 Tx 확인
 ![Assignment2_이주연_2](https://user-images.githubusercontent.com/70181621/107146971-c1a4af00-698e-11eb-9c86-72e1ff349a43.png)
 
+***
+# Assignment 3.
+1. 계정 생성
+2. 계정 확인
+3. Faucet
+4.
+
+
+## 3.1. Solidity Compiler 설치
+```
+npm install -g solc
+```
+
+## 3.2 스마트 컨트랙트 
+작성 조건
+1) 각각의 constant가 다음과 같은 값을 return하도록 할 것
+2) 입력: ```beyond.showWhoWeAre()  //  출력: "We are Team BEYOND!"
+3) 입력: ```beyond.cleaner("아무 값이나 입력해도 값이 나오지 않게")  // 출력: ""
+4) 파일명: beyond.sol
+
+
+```
+// this is beyond.sol
+pragma solidity 0.5.16;
+
+contract teamBeyond {
+  string internal constant seeWhoWeAre = "We are Team BEYOND!";
+  string internal chainResult;
+
+  function beyond(string memory _chainResult) public {
+    chainResult = _chainResult;
+  }
+
+  function showWhoWeAre() external pure returns (string memory) {
+    return seeWhoWeAre;
+  }
+
+  function cleaner(string calldata _chainEntry) external view returns (string memory) {
+// completely disregard the _chainEntry
+    return chainResult;
+  }
+} 
+```
+
+## 3.3 beyond.sol을 ABI와 bytecode로 컴파일
+
+## 3.4 네트워크 실행 및 Console 접속
+Assignment 1 
+
+## 3.5 bytecode와 ABI 객체 정의
+```
+bytecode = '0x/*STEP 3 결과 입력*/'
+```
+```
+obj = JSON.parse('/*STEP 3 결과 입력*/')
+```
+
+- 본 guideline에서는 편의를 위해 변수를 위와 같은 이름으로 선언하여 계속 사용함
+- [JSON.parse](https://www.npmjs.com/package/parse-json) 설치 (STEP 3에서 얻은 ABI는 string. 그러나 geth 콘솔에서 컨트랙트 생성할 때 parameter는 JS배열 > 파싱 필요)
+
+참고자료
+- [컨트랙트 생성 시, parameter는 JS배열](https://web3js.readthedocs.io/en/v1.2.1/web3-eth-contract.html)
+- [parsing하지 않고 정의 시, 에러 발생](https://github.com/trufflesuite/truffle-artifactor/issues/9)
+- [3.3 결과를 잘못 입력 시, 에러 발생](https://stackoverflow.com/questions/56126313/json-expecting-eof-got)
+
+## 3.6 parsing한 ABI 객체로 컨트랙트 객체 생성
+```
+// web3 v0.x 문법 (공식 docs에 없음)
+contractObj = web3.eth.contract(obj)
+```
+```
+// web3 v1.x 문법
+contractObj = new web3.eth.Contract(obj)
+```
+- 컨트랙트 객체를 만들어야 interact가 용이 (개별 스마트 컨트랙트에 json interface를 부여하기 때문: web3가 자동으로 low level인 ABI call을 RPC로 바꿔서 표기)
+
+## 3.7 배포를 위한 parameter 정의
+```
+deployObj = {from:eth.coinbase, data: bytecode, gas:2000000}
+```
+
+## 3.8 컨트랙트 인스턴스 생성 및 배포
+```
+Instance = contractObj.new(deployObj)
+```
+
+## 3.9 계정 [unlock](#25-계정-unlock)
+
+## 3.10 컨트랙트 인스턴스 생성 및 배포
+- Transaction Hash [확인가능](#28-transaction-receipt-출력) (컨트랙트 생성 트랜잭션이기 때문)
+- 컨트랙트는 배포되어 채굴된 이후에 주소 생성
+- Etherscan에서 Transaction Hash로 검색하면, 해당 트랜잭션이 본인 계정 주소에서 보낸 'Contract Creation'임을 확인 가능
+
+## 3.11 Transaction Receipt에서 컨트랙트 주소 확인
+```
+eth.getTransactionReceipt(Instance.transactionHash)
+```
+
+## 3.12 컨트랙트 주소 정의
+```
+address = eth.getTransactionReceipt(Instance.transactionHash).contractAddress
+```
+
+## 3.13 컨트랙트 객체 정의
+```
+beyond = contractObj.at(address)
+```
+
+## 3.14 beyond.showWoWeAre()과 beyond.cleaner("/*아무거나 입력*/") 출력 
+```
+beyond.showWoWeAre()
+```
+```
+beyond.cleaner("아무거나 입력해서 확인")
+```

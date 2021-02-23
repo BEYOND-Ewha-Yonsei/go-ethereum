@@ -305,3 +305,5 @@ beyond.showWoWeAre()
 ```
 beyond.cleaner("아무거나 입력해서 확인")
 ```
+
+![Assignment3_이주연](https://user-images.githubusercontent.com/70181621/108871250-4e609580-763c-11eb-8391-6201d130b33f.png)

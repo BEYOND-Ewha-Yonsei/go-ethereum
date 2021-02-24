@@ -198,13 +198,14 @@ npm install -g solc
 ## 3.2 스마트 컨트랙트 작성
 작성 조건
 1) 각각의 constant가 다음과 같은 값을 return하도록 할 것
-2) 입력: ```beyond.showWhoWeAre()  //  출력: "We are Team BEYOND!"
-3) 입력: ```beyond.cleaner("아무 값이나 입력해도 값이 나오지 않게")  // 출력: ""
+2) 입력: ```beyond.showWhoWeAre()```  //  출력: ```"We are Team BEYOND!"```
+3) 입력: ```beyond.cleaner("아무 값이나 입력해도 값이 나오지 않게")```  // 출력: ```""```
 4) 파일명: beyond.sol
 
 
 ```
 // this is beyond.sol
+
 pragma solidity 0.5.16;
 
 contract teamBeyond {
@@ -229,10 +230,12 @@ contract teamBeyond {
 ## 3.3 beyond.sol을 ABI와 bytecode로 컴파일
 ```
 // ABI
+
 solc --abi beyond.sol
 ```
 ```
 // bytecode
+
 solc --bin beyond.sol
 ```
 
@@ -258,10 +261,12 @@ obj = JSON.parse('/*STEP 3 결과 입력*/')
 ## 3.6 parsing한 ABI 객체로 컨트랙트 객체 생성
 ```
 // web3 v0.x 문법 (공식 docs에 없음)
+
 contractObj = web3.eth.contract(obj)
 ```
 ```
 // web3 v1.x 문법
+
 contractObj = new web3.eth.Contract(obj)
 ```
 - 컨트랙트 객체를 만들어야 interact가 용이 (개별 스마트 컨트랙트에 json interface를 부여하기 때문: web3가 자동으로 low level인 ABI call을 RPC로 바꿔서 표기)
